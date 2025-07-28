@@ -341,31 +341,16 @@ local minimizedSize = UDim2.new(0, 450, 0, 32)
 
 
 minimizeButton.MouseButton1Click:Connect(function()
-
-
-
 	isMinimized = not isMinimized
-
-
-
 	local targetSize = isMinimized and minimizedSize or originalSize
-
-
-
 	local tween = TweenService:Create(mainFrame, TweenInfo.new(0.3), {Size = targetSize})
-
-
-
 	tween:Play()
 
-
+	tabButtonsScroll.Visible = not isMinimized
+	tabContentFrame.Visible = not isMinimized
 
 	minimizeButton.Text = isMinimized and "+" or "-"
-
-
-
 end)
-
 
 
 local tabButtonsScroll = Instance.new("ScrollingFrame")
