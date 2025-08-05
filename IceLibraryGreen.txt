@@ -346,7 +346,6 @@ minimizeButton.MouseButton1Click:Connect(function()
 	local tween = TweenService:Create(mainFrame, TweenInfo.new(0.3), {Size = targetSize})
 	tween:Play()
 
-	tabButtonsScroll.Visible = not isMinimized
 	tabContentFrame.Visible = not isMinimized
 
 	minimizeButton.Text = isMinimized and "+" or "-"
@@ -3570,3 +3569,4 @@ end
 tabButtonsScroll.ScrollBarThickness = 0
 
 return IceLibrary
+
